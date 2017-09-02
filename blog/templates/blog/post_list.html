@@ -1,15 +1,11 @@
-<HTML>
-<HEAD>
-<img align="center" src="proy1.jpg" width="900" height="212"> <hr>
-<TITLE> Proyecto N°2   </TITLE>
-</HEAD>
-<b> Integrantes:  </b><br>
-Enr&iacutequez Katherine<br>
-Grijalva Santiago<br>
-V&aacutesconez Francisco<br>
-</marquee>
-<BODY BGCOLOR="#ffffcc" >
+<div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
 
-
-</BODY>
-</HTML>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text}} *</p>
+    </div>
+{% endfor %}
